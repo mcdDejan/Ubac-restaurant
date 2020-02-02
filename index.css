@@ -170,6 +170,7 @@ a{
     position: absolute;
     top: 12vh;
     right: 2vh;
+    z-index: 10;
 }
 
 .hamburger i {
