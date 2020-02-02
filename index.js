@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+   
 
     $(".hamburger").click((event) => {
         if ($(".menu").css("display") == "none") {
