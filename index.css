@@ -206,6 +206,7 @@ a{
     }
 
     .menu-container {
+        display: none;
         position: absolute;
         left: 0;
         height: auto;
