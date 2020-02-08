@@ -12,13 +12,17 @@ $( document ).ready(function() {
     
     });
 
-    $("#our").click(() => {
-        
-        if ($(".right-menu").css("display") == "none") {
-            $(".right-menu").css({"display": "block"});
+    $(".menu li").click((event) => {
+
+        var elementId = $(event.target).attr("id")
+        console.log(elementId);
+        if ($(".menu-container").css("display") == "none") {
+            $(".menu-container").css({"display": "flex"});
         } else {
-            $(".right-menu").css({"display": "none"});
+            $(".menu-container").css({"display": "none"});
         };
+
+        
     });
 
     // $("#our").click(() => {
