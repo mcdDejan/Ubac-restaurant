@@ -18,8 +18,24 @@ $( document ).ready(function() {
         var elementId = $(event.target).attr("id")
         console.log(elementId);
         $(".main-container").html(" ");
+
+        switch(elementId) {
+            case 'home':
+              // code block
+              break;
+            case 'menu':
+                createMenuContainer();
+              break;
+              case 'about':
+                // code block
+                break;
+                case 'gallery':
+                    // code block
+                    break;
+            default:
+              // code block
+          } 
         
-        createMenuContainer();
         $("#food-menu li").click((event) => {
             $(".right-menu").html(" ");
             let elementId = $(event.target).attr("id");
