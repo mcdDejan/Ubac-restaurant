@@ -31,7 +31,7 @@ getMenuContent=()=>{
                 {foodName:'Микс Убац',foodPrice:'120'}
             ]
         },
-        sesonSalad:{
+        seasonSalad:{
             header:'Сезонски салати',
             img:'our-menu.jpg',
             list:[
@@ -61,7 +61,7 @@ getMenuContent=()=>{
                 {foodName:'Микс Убац',foodPrice:'120'}
             ]
         },
-        vine:{
+        wine:{
             header:'Вина',
             img:'our-menu.jpg',
             list:[
