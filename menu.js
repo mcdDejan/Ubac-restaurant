@@ -24,19 +24,52 @@ $(menuContent).append(foodListContainer);
 return menuContent
 
 };
+
+createLeftMenuContent = () => {
+    let menuLogo = $("<div>").attr("class", "menu-logo");
+    let menuLogoImg = $("<img>").attr("src","./images/logo-ubac.jpg");
+    
+    let foodMenu = $("<ul>").attr("id", "food-menu")
+    let dayDish = $("<li>").attr("id", "dayDish").text('Наш предлог');
+    let bbq = $("<li>").attr("id", "bbq").text('Скара');
+    let salad = $("<li>").attr("id", "salad").text('Салати');
+    let season = $("<li>").attr("id", "season").text('Сезонски салати');
+    let beer = $("<li>").attr("id", "beer").text('Пива');
+    let spirits = $("<li>").attr("id", "spirits").text('Вина');
+    let wine = $("<li>").attr("id", "wine").text('Жестоко 0,5');
+    let softDrinks = $("<li>").attr("id", "softDrinks").text('Сокови');
+    let coffe = $("<li>").attr("id", "coffe").text('Кафе');
+
+    $(menuLogo).append(menuLogoImg);
+    $(foodMenu).append(dayDish);
+    $(foodMenu).append(bbq);
+    $(foodMenu).append(salad);
+    $(foodMenu).append(season);
+    $(foodMenu).append(beer);
+    $(foodMenu).append(spirits);
+    $(foodMenu).append(wine);
+    $(foodMenu).append(softDrinks);
+    $(foodMenu).append(coffe);
+
+
+    return [menuLogo, foodMenu]
+};
+
+
 createMenuContainer = (content) => {
-   let rightMenuContent= createRightMenuContent(content.bbq)
 
     let menuContainer = $("<div>").attr("class", "menu-container");
     let leftMenu = $("<div>").attr("class", "left-menu");
     let rightMenu = $("<div>").attr("class", "right-menu");
     let leftMenuContentArray = createLeftMenuContent();
-    console.log(leftMenuContentArray)
+    console.log(leftMenuContentArray[0][0])
 
-    $(rightMenu).append(rightMenuContent)
-
+    
+    $(leftMenu).append(leftMenuContentArray[0][0]);
+    $(leftMenu).append(leftMenuContentArray[1][0]);
     $(menuContainer).append(leftMenu);
     $(menuContainer).append(rightMenu);
     $(mainContainer).append(menuContainer);
+
 };
 
