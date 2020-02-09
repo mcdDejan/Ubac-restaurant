@@ -1,0 +1,98 @@
+@keyframes open-left {
+    0%{
+        transform: rotate(-10deg);  
+    }
+    50%{
+        transform: rotate(10deg);
+
+    }
+    100%{
+        left: -50vw;
+        opacity: 0;
+    }
+}
+
+
+@keyframes open-right {
+    0%{
+        transform: rotate(10deg);  
+    }
+    50%{
+        transform: rotate(-10deg);
+
+    }
+    100%{
+        right:-50vw;
+        opacity: 0;
+    }
+}
+
+@keyframes open-close-left {
+    0%{
+        transform: rotate(10deg); 
+        left: -50vw;
+        opacity: 0;
+ 
+    }
+    50%{
+        transform: rotate(-10deg);
+        left: 20vw;
+        opacity: 1;
+
+    }
+    100%{
+        transform: rotate(10deg); 
+        left: -50vw;
+        opacity: 0;
+    }
+}
+@keyframes open-close-right {
+    0%{
+        transform: rotate(-10deg); 
+        right: -50vw;
+        opacity: 0;
+ 
+    }
+    50%{
+        transform: rotate(10deg);
+        right: 20vw;
+        opacity: 1;
+
+    }
+    100%{
+        transform: rotate(-10deg); 
+        right: -50vw;
+        opacity: 0;
+    }
+}
+
+.start-cover-img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+   height: 100%; 
+}
+.start-cover-img img {
+    position: absolute;
+    height: 75vh;
+}
+.leva-krigla{
+    bottom: 0;
+    left:20vw;
+}
+.desna-krigla{
+    bottom: 0;
+    right: 20vw;
+}
+.open-left{
+    animation: open-left 5s;
+}
+.open-right{
+    animation: open-right 5s;
+}
+.open-close-left{
+    animation: open-close-left 3s; 
+}
+.open-close-right{
+    animation: open-close-right 3s; 
+}

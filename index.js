@@ -14,9 +14,9 @@ $( document ).ready(function() {
     });
     
     $(".menu li").click((event) => {
+        animateBeerMug();
         
         var elementId = $(event.target).attr("id")
-        console.log(elementId);
         $(".main-container").html(" ");
 
         switch(elementId) {
@@ -39,7 +39,6 @@ $( document ).ready(function() {
         $("#food-menu li").click((event) => {
             $(".right-menu").html(" ");
             let elementId = $(event.target).attr("id");
-            console.log(menuContent[elementId])
             let content = createRightMenuContent(menuContent[elementId]);
             $(".right-menu").append(content);
     

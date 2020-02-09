@@ -62,7 +62,6 @@ createMenuContainer = (content) => {
     let leftMenu = $("<div>").attr("class", "left-menu");
     let rightMenu = $("<div>").attr("class", "right-menu");
     let leftMenuContentArray = createLeftMenuContent();
-    console.log(leftMenuContentArray[0][0])
 
     
     $(leftMenu).append(leftMenuContentArray[0][0]);
