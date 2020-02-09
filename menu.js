@@ -33,10 +33,10 @@ createLeftMenuContent = () => {
     let dayDish = $("<li>").attr("id", "dayDish").text('Наш предлог');
     let bbq = $("<li>").attr("id", "bbq").text('Скара');
     let salad = $("<li>").attr("id", "salad").text('Салати');
-    let season = $("<li>").attr("id", "season").text('Сезонски салати');
+    let season = $("<li>").attr("id", "seasonSalad").text('Сезонски салати');
     let beer = $("<li>").attr("id", "beer").text('Пива');
-    let spirits = $("<li>").attr("id", "spirits").text('Вина');
-    let wine = $("<li>").attr("id", "wine").text('Жестоко 0,5');
+    let spirits = $("<li>").attr("id", "wine").text('Вина');
+    let wine = $("<li>").attr("id", "spirits").text('Жестоко 0,5');
     let softDrinks = $("<li>").attr("id", "softDrinks").text('Сокови');
     let coffe = $("<li>").attr("id", "coffe").text('Кафе');
 

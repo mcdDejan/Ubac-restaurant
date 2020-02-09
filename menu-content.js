@@ -2,7 +2,7 @@ getMenuContent=()=>{
     const menu = {
         dayDish:{
             header:'Наш предлог',
-            img:'our-menu.jpg',
+            img:'daily-dish.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -13,7 +13,7 @@ getMenuContent=()=>{
         },
         bbq:{
             header:'Скара',
-            img:'our-menu.jpg',
+            img:'bbq.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -23,7 +23,7 @@ getMenuContent=()=>{
         },
         salad:{
             header:'Салати',
-            img:'our-menu.jpg',
+            img:'salad.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -33,7 +33,7 @@ getMenuContent=()=>{
         },
         seasonSalad:{
             header:'Сезонски салати',
-            img:'our-menu.jpg',
+            img:'season-salad.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -43,7 +43,7 @@ getMenuContent=()=>{
         },
         beer:{
             header:'Пиво',
-            img:'our-menu.jpg',
+            img:'beer.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -53,7 +53,7 @@ getMenuContent=()=>{
         },
         spirits:{
             header:'Жестоко',
-            img:'our-menu.jpg',
+            img:'spirits.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -63,7 +63,7 @@ getMenuContent=()=>{
         },
         wine:{
             header:'Вина',
-            img:'our-menu.jpg',
+            img:'wine.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -73,7 +73,7 @@ getMenuContent=()=>{
         },
         softDrinks:{
             header:'Сокови',
-            img:'our-menu.jpg',
+            img:'coke.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
@@ -83,7 +83,7 @@ getMenuContent=()=>{
         },
         coffe:{
             header:'Кафе',
-            img:'our-menu.jpg',
+            img:'coffe.png',
             list:[
                 {foodName:'Џигер',foodPrice:'120'},
                 {foodName:'Мучкалица',foodPrice:'160/180'},
