@@ -1,12 +1,13 @@
 let mainContainer = $(".main-container");
 
 createRightMenuContent=(category)=>{
-let menuContent = $('<div>').attr('class','flex left-menu-content-wrapper');
-let headerWrapper = $('<div>').attr('class','flex left-menu-header-wrapper');
-let header=$('<h1>').attr('class','left-menu-header').text(category.header);
+let menuContent = $('<div>').attr('class','flex right-menu-content-wrapper');
+let headerWrapper = $('<div>').attr('class','flex right-menu-header-wrapper');
+let header=$('<h1>').attr('class','right-menu-header').text(category.header);
+let headerImageWrapper = $('<div>').attr('class','header-image-wrapper');
 let headerImage = $('<img>').attr('src','./images/'+category.img);
 
-let foodListContainer = $('<div>').attr('class','flex food-list-container');
+let foodListContainer = $('<div>').attr('class','food-list-container');
 let foodList=$('<ul>');
 let foodArray = category.list;
 
@@ -18,7 +19,8 @@ foodArray.forEach((elem,index)=>{
 $(foodListContainer).append(foodList);
 
 $(headerWrapper).append(header);
-$(headerWrapper).append(headerImage);
+$(headerImageWrapper).append(headerImage);
+$(headerWrapper).append(headerImageWrapper);
 $(menuContent).append(headerWrapper);
 $(menuContent).append(foodListContainer);
 return menuContent
@@ -46,8 +48,8 @@ createLeftMenuContent = () => {
     $(foodMenu).append(salad);
     $(foodMenu).append(season);
     $(foodMenu).append(beer);
-    $(foodMenu).append(spirits);
     $(foodMenu).append(wine);
+    $(foodMenu).append(spirits);
     $(foodMenu).append(softDrinks);
     $(foodMenu).append(coffe);
 
@@ -58,7 +60,7 @@ createLeftMenuContent = () => {
 
 createMenuContainer = (content) => {
 
-    let menuContainer = $("<div>").attr("class", "menu-container");
+    let menuContainer = $("<div>").attr("class", "flex menu-container");
     let leftMenu = $("<div>").attr("class", "left-menu");
     let rightMenu = $("<div>").attr("class", "right-menu");
     let leftMenuContentArray = createLeftMenuContent();

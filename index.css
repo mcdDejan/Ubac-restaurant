@@ -208,6 +208,7 @@ a{
         width: 20%;
         padding: 0 3%;
         text-align: center;
+        border-right: 3px solid rgb(131, 0, 0, 0.7);
     }
 
     .menu-logo img {
@@ -226,18 +227,13 @@ a{
         cursor: pointer; 
     }
 
-    .devide {
-        width: 5px;
-        background-color: rgb(131, 0, 0, 0.7);
-    }
-
     .right-menu {
         width: 70%;
         padding: 0 3%;
     }
 
-    .food-class {
-        flex-flow: row;
+    .right-menu-header-wrapper {
+        width: 100%;
         justify-content: space-between;    
         margin-bottom: 3%;
         background: rgb(131, 0, 0, 0.3);
@@ -247,34 +243,34 @@ a{
         border-bottom-right-radius: 50px;
     }
 
-    .current-food {
-        font-size: xx-large;
+    .right-menu-header {
         color:rgb(131, 0, 0);
     }
 
-    .food-img {
+    .header-image-wrapper {
         width: 20%;
+        position: absolute;
+        right: 10%;
+        top: 1%;
         text-align: center;
     }
-
-    .food-img img {
-        width: 65%;
-        border-radius: 50%;
-        animation: bounce 2s linear infinite;
+    
+    .header-image-wrapper img {
+        width: 100%;
     }
-
-    .food-price {
+    .food-list-container {
         width: 50%;
-        height: 50%;
+        height: 50vh;
         overflow-y: auto;
     }
 
-    .food-price ul li{
+    .food-list-container ul li{
         display: flex;
         justify-content: space-between;
+        font-size: large;
     }
 
-    .food-price ul li span{
+    .food-list-container ul li span{
         padding: 5px 10px;
         margin-top: 5px;
         background-color: rgba(255,255,255,0.5);

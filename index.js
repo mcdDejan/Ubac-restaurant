@@ -15,13 +15,14 @@ $( document ).ready(function() {
     
     $(".menu li").click((event) => {
         animateBeerMug();
+        $(".main-page-info").css({"display": "none"});
         
         var elementId = $(event.target).attr("id")
         $(".main-container").html(" ");
 
         switch(elementId) {
-            case 'home':
-              // code block
+            case 'home':           
+                $(".main-page-info").css({"display": "block"});
               break;
             case 'menu':
                 createMenuContainer();
@@ -46,22 +47,13 @@ $( document ).ready(function() {
         })
     });
  
-    
-    // $("#our").click(() => {
-        
-    //     if ($(".our").css("display") == "none") {
-    //         $(".our").css({"display": "flex"});
-    //     } else {
-    //         $(".our").css({"display": "none"});
-    //     };
+
+    // $("#food-menu li").click(function() {
+
+    //     var a = $(this).text()
+    //     $(".current-food").html(a);
+
     // });
-
-    $("#food-menu li").click(function() {
-
-        var a = $(this).text()
-        $(".current-food").html(a);
-
-    });
 
 
 
