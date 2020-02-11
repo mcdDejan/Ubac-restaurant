@@ -249,6 +249,7 @@ a{
 
     .header-image-wrapper {
         width: 20%;
+        height:30%;
         position: absolute;
         right: 10%;
         top: 1%;
@@ -256,7 +257,7 @@ a{
     }
     
     .header-image-wrapper img {
-        width: 100%;
+        height: 100%;
     }
     .food-list-container {
         width: 50%;
