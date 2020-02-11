@@ -28,7 +28,7 @@ $( document ).ready(function() {
                 createMenuContainer();
               break;
               case 'about':
-                // code block
+                createAboutContainer();
                 break;
                 case 'gallery':
                     // code block
