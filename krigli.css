@@ -78,11 +78,11 @@
 }
 .leva-krigla{
     bottom: 0;
-    left:3vw;
+    left:1vw;
 }
 .desna-krigla{
     bottom: 0;
-    right: 3vw;
+    right: 1vw;
 }
 .open-left{
     animation: open-left 5s;
@@ -95,23 +95,23 @@
 }
 .open-close-right{
     animation: open-close-right 3s; 
-};
+}
 
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 769px){
 
     .start-cover-img{
         height: 100%; 
-    };   
+    }   
     .start-cover-img img {
         height: 75vh;
-    };
+    }
     .leva-krigla{
-        left:20vw;
-    };
+        left:19vw;
+    }
     .desna-krigla{
-        right: 20vw;
-    };
+        right: 19vw;
+    }
 
 
 };
