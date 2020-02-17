@@ -14,12 +14,7 @@ $( document ).ready(function() {
             console.log(classState);
         };
 
-        if ($(".menu-container").css("display") == "flex") {
-            $(".menu-container").css({"display": "none"});
-        }else {
-            $(".menu-container").css({"display": "flex"});
-        };
-        
+        $(".main-container").html(" ");
     });
 
 
@@ -60,7 +55,9 @@ $( document ).ready(function() {
 
         $("#food-menu li").click((event) => {
             if (screen.width < 767) {
-                $(".left-menu").css({"display": "none"});
+                $("#food-menu").css({"display": "flex", "overflow-x": "auto", "align-items": "strech"});
+                $(".left-menu ul li").css({"display": "flex", "align-items": "center", "background-color": "rgba(131, 0, 0, 0.4)","border-radius": "10px", "padding": "5px", "margin": "5px"});
+                $(".right-menu-header").css({"margin": "7px"});
             }
             $(".right-menu").html(" ");
             let elementId = $(event.target).attr("id");

@@ -175,7 +175,7 @@ a{
 
 .food-list-container {
     width: 100%;
-    height: 50vh;
+    height: 35vh;
     padding-right: 10px;
     overflow-y: auto;
 }
