@@ -57,7 +57,7 @@ $( document ).ready(function() {
             if (screen.width < 767) {
                 $("#food-menu").css({"display": "flex", "overflow-x": "auto", "align-items": "strech"});
                 $(".left-menu ul li").css({"display": "flex", "align-items": "center", "background-color": "rgba(131, 0, 0, 0.4)","border-radius": "10px", "padding": "5px", "margin": "5px"});
-                $(".right-menu-header").css({"display": "none"});
+                $(".right-menu-header").css({"margin": "7px"});
             }
             $(".right-menu").html(" ");
             let elementId = $(event.target).attr("id");
