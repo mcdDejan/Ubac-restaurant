@@ -6,6 +6,7 @@ body{
 }
 *{
     box-sizing: border-box;
+    cursor: default;
 }
 ul{
     padding: 0;
@@ -89,10 +90,9 @@ a{
     padding: 0;
 }
 .main-page-info li:first-child {
-    font-size: x-large;
+    font-size: large;
 }
 .main-page-info li:nth-child(4) {
-    padding-top: 15px;
     font-size: large;
 }
 .menu-holder{ 
@@ -167,6 +167,7 @@ a{
 
 .right-menu-header {
     color:rgb(131, 0, 0);
+    margin: 7px;
 }
 
 .header-image-wrapper {
@@ -282,7 +283,7 @@ a{
     }
     
     .facebook{
-        top: 50vh;
+        top: 90vh;
         left: 0;
         z-index: 1;
     }
@@ -301,7 +302,7 @@ a{
         height: 100%;
     }
     .main-page-info{
-        padding:45px;
+        padding:5px;
     }
     
     .main-page-info ul li {

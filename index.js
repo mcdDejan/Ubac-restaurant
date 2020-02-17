@@ -28,7 +28,10 @@ $( document ).ready(function() {
     
     $(".menu li").click((event) => {
         animateBeerMug();
-        $(".main-page-info").css({"display": "none"});
+        if(screen.width<768){
+
+            $(".main-page-info").css({"display": "none"});
+        }
         
         var elementId = $(event.target).attr("id")
         $(".main-container").html(" ");
