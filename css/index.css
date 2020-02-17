@@ -22,7 +22,7 @@ a{
     flex-flow: column;
 }
 .master{
-    background:url('images/background.jpg');
+    background:url('../images/background.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -265,14 +265,15 @@ a{
         font-size: x-large;
         padding: 10px;
     }
-    .menu li:hover {
+    .menu li:hover ,.menu-active{
         color: rgb(255, 255, 255, 0.8);
         background-color: rgb(131, 0, 0, 0.4);
         border-radius: 10px;
-    }
-    .menu li:active {
         text-decoration: underline;
     }
+
+    
+ 
     
     .hamburger {
         display: none;
@@ -330,7 +331,7 @@ a{
         width: 90%;
     }
     
-    .left-menu li:hover {
+    .left-menu-active, .left-menu li:hover {
         color: rgb(255, 255, 255, 0.8);
         background-color: rgb(131, 0, 0, 0.4);
         border-radius: 10px;

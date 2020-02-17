@@ -74,14 +74,15 @@ createMenuContainer = (content) => {
 
 };
 
-createAboutContainer = () => {
-    let aboutContainer = $("<div>").attr("class", "about-container");
-    let aboutHeader = $("<h2>").attr("class", "about-header").text("Гостилница Убац");
-    let aboutContent = $("<p>").attr("class", "about-content").text("Гостилница Убац е докажано мирно место, за убав провод со вкусна скара, салати и мезиња. Дојдете и уживајте")
+addClassActiveBtn=(element,cssClass,elemList)=>{
 
-    
-    $(aboutContainer).append(aboutHeader);
-    $(aboutContainer).append(aboutContent);
-    $(mainContainer).append(aboutContainer);
+    for (let index = 0; index < elemList.length; index++) {
+        $(elemList[index]).attr('class')==cssClass?$(elemList[index]).removeClass(cssClass):null;
+        $(elemList[index]).css({'color':'rgb(131,0,0)'})
+        
+    }
+    $(element).addClass(cssClass)
+    $(element).css({'color':'white'});
+};
 
-}
+

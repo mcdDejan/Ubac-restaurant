@@ -28,6 +28,7 @@ $( document ).ready(function() {
     
     $(".menu li").click((event) => {
         animateBeerMug();
+        addClassActiveBtn(event.target,'menu-active',$('.menu li'));
         if(screen.width<768){
 
             $(".main-page-info").css({"display": "none"});
@@ -57,6 +58,8 @@ $( document ).ready(function() {
         
 
         $("#food-menu li").click((event) => {
+            addClassActiveBtn(event.target,'left-menu-active',$('#food-menu li'))
+
             if (screen.width < 767) {
                 $("#food-menu").css({"display": "flex", "overflow-x": "auto", "align-items": "strech"});
                 $(".left-menu ul li").css({"display": "flex", "align-items": "center", "background-color": "rgba(131, 0, 0, 0.4)","border-radius": "10px", "padding": "5px", "margin": "5px"});
