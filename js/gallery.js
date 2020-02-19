@@ -37,17 +37,18 @@ makeGallery = (categories) => {
 createGalleryContainer = () => {
     let allPictures = getPictures();
     let pictureCategories = Object.keys(allPictures);
-
+    let pictures = [[],[],[]]
+    pictureCategories.forEach((elem,index) => {
+        pictures[index].push(allPictures[elem])
+    });
+console.log(pictures)
     let gallery = makeGallery(pictureCategories);
     $('.main-container').append(gallery);
 
-    let pictures = []
-    pictureCategories.forEach((elem) => {
-        pictures.push(allPictures[elem])
-    });
+
+
 $('.gallery-btn').click(event=>{
     let elemID = $(event.target).attr('class');
-    console.log(elemID)
 })
 
     
