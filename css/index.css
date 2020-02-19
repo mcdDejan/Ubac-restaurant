@@ -58,7 +58,7 @@ a{
             color:rgb(131, 0, 0);
         }
         .content-conteiner{
-            position: relative;
+            position: inherit;
         justify-content: center;
         padding: 10%;
         height: 80vh;
@@ -266,12 +266,12 @@ a{
     .menu li{
         font-size: x-large;
         padding: 10px;
+        margin: 0 3px;
     }
-    .menu li:hover ,.menu-active{
+    .menu li:hover, .menu-active{
         color: rgb(255, 255, 255, 0.8);
         background-color: rgb(131, 0, 0, 0.4);
         border-radius: 10px;
-        text-decoration: underline;
     }
 
     
@@ -286,9 +286,9 @@ a{
     }
     
     .facebook{
-        top: 90vh;
-        left: 0;
-        z-index: 1;
+        top: 0;
+        right: 0;
+        left: auto;
     }
     .facebook i{
         font-size: 400%;
@@ -297,6 +297,7 @@ a{
         color:#3b5998;
     }
     .content-conteiner{
+        position: relative;
         padding: 0;
         padding-right: 10%;
     }
@@ -320,16 +321,16 @@ a{
     }
 
     .menu-container {
-        position: absolute;
-        left: 0;
-        height: auto;
-        width: 100%;
+        top: 0;
     }
 
     .left-menu {
         width: 20%;
     }
 
+    .left-menu ul li {
+        margin: 3px 0;
+    }
     .menu-logo img {
         width: 90%;
     }
@@ -338,7 +339,7 @@ a{
         color: rgb(255, 255, 255, 0.8);
         background-color: rgb(131, 0, 0, 0.4);
         border-radius: 10px;
-        cursor: pointer; 
+        cursor: pointer;
     }
 
     .right-menu {
@@ -371,6 +372,7 @@ a{
     }
 
     .about-container {
+        top: 0;
         width: 90%;
         padding: 3%;
         margin: 0 5%;
