@@ -50,7 +50,9 @@ $( document ).ready(function() {
                 
                 break;
                 case 'gallery':
-                    // code block
+                    createGalleryContainer();
+                    $(".main-page-info").css({"display": "none"});
+
                     break;
             default:
               // code block

@@ -58,6 +58,7 @@ a{
             color:rgb(131, 0, 0);
         }
         .content-conteiner{
+            position: relative;
         justify-content: center;
         padding: 10%;
         height: 80vh;
@@ -77,6 +78,7 @@ a{
 .facebook i:active{
     color:#3b5998;
 }
+
 .main-page-info{
     position: absolute;
     bottom: 0;
@@ -302,6 +304,7 @@ a{
     .start-cover-img {
         height: 100%;
     }
+    
     .main-page-info{
         padding:5px;
     }
