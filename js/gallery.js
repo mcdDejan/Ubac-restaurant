@@ -32,6 +32,28 @@ makeGallery = (categories) => {
     $(galleryContainer).append(gallerySlideWrapper);
     console.log(galleryContainer)
     return galleryContainer
+};
+
+let counter = -1;
+let catCounter =0;
+gallerySlideShow=()=>{
+    let allPictures = getPictures();
+    let pictureCategories = Object.keys(allPictures);
+
+    if(counter>allPictures[pictureCategories[catCounter]].length-1){
+        counter=0;
+        catCounter+=1;
+    };
+    if(counter<0){
+        counter=allPictures[pictureCategories[catCounter]].length-1;
+        catCounter-=1;
+    };
+    catCounter>=pictureCategories.length?catCounter=0:null;
+    catCounter<0?catCounter=pictureCategories.length-1:null;
+
+    console.log(allPictures[pictureCategories[catCounter]][counter])
+
+
 }
 
 createGalleryContainer = () => {
@@ -41,24 +63,25 @@ createGalleryContainer = () => {
     pictureCategories.forEach((elem,index) => {
         pictures[index].push(allPictures[elem])
     });
-console.log(pictures)
     let gallery = makeGallery(pictureCategories);
     $('.main-container').append(gallery);
 
-
+ 
 
 $('.gallery-btn').click(event=>{
-    let elemID = $(event.target).attr('class');
+    let elemCss = $(event.target).attr('class').split('-');
+    elemCss = elemCss[elemCss.length-1]
+    elemCss=='right'?counter+=1:counter-=1;
+    gallerySlideShow()
 })
 
-    
-    pictures.forEach(elem => {
-        let counter = 0;
-        for (let index = 0; index < elem.length; index++) {
-            counter += 1;
 
-        }
-    });
-
+setInterval(()=>{
+    counter+=1
+    gallerySlideShow()
+},5000);
 
 }
+
+
+
