@@ -1,8 +1,8 @@
 getPictures = () => {
     const pictures = {
-        bbq: ['bbq-1.jpg', 'bbq-2.jpg', 'bbq-3.jpg', 'bbq-4.jpg'],
-        salad: ['salad-1.jpg', 'salad-2.jpg', 'salad-3.jpg', 'salad-4.jpg'],
-        location: ['loc-1.jpg', 'loc-2.jpg', 'loc-3.jpg', 'loc-4.jpg']
+        bbq: ['skara-1.jpg', 'skara-2.jpg', 'skara-3.jpg', 'skara-4.jpg'],
+        salad: ['salati-1.jpg', 'salati-2.jpg', 'salati-3.jpg', 'salati-4.jpg'],
+        location: ['lokacija-1.jpg', 'lokacija-2.jpg', 'lokacija-3.jpg', 'lokacija-4.jpg']
     }
     return pictures;
 };
@@ -13,7 +13,7 @@ makeGallery = (categories) => {
     let galleryCategoryWrapper = $('<ul>').attr('class', 'flex gallery-category-wrapper');
 
     categories.forEach((elem, index) => {
-        let item = $('<li>').attr('class', 'category-btn' + index).text(categoriesText[index]);
+        let item = $('<li>').attr('class', 'category-btn-' + index).text(categoriesText[index]);
         $(galleryCategoryWrapper).append(item);
     });
 
@@ -34,12 +34,15 @@ makeGallery = (categories) => {
     return galleryContainer
 };
 
+showPicture=(picName)=>{
+$('.slide-holder img').attr('src','./images/gallery-images/'+picName);
+}
+
 let counter = -1;
 let catCounter =0;
+let allPictures = getPictures();
+let pictureCategories = Object.keys(allPictures);
 gallerySlideShow=()=>{
-    let allPictures = getPictures();
-    let pictureCategories = Object.keys(allPictures);
-
     if(counter>allPictures[pictureCategories[catCounter]].length-1){
         counter=0;
         catCounter+=1;
@@ -51,10 +54,8 @@ gallerySlideShow=()=>{
     catCounter>=pictureCategories.length?catCounter=0:null;
     catCounter<0?catCounter=pictureCategories.length-1:null;
 
-    console.log(allPictures[pictureCategories[catCounter]][counter])
-
-
-}
+    showPicture(allPictures[pictureCategories[catCounter]][counter])
+};
 
 createGalleryContainer = () => {
     let allPictures = getPictures();
@@ -66,20 +67,27 @@ createGalleryContainer = () => {
     let gallery = makeGallery(pictureCategories);
     $('.main-container').append(gallery);
 
- 
+ $('li[class^="category-btn-"]').click(event=>{
+    let cssClass = $(event.target).attr('class').split('-');
+    cssClass = parseInt(cssClass[cssClass.length-1]);
+    catCounter=cssClass;
+    counter=0;
+    showPicture(allPictures[pictureCategories[catCounter]][counter])
+ });
 
 $('.gallery-btn').click(event=>{
     let elemCss = $(event.target).attr('class').split('-');
     elemCss = elemCss[elemCss.length-1]
     elemCss=='right'?counter+=1:counter-=1;
     gallerySlideShow()
-})
-
+});
 
 setInterval(()=>{
     counter+=1
     gallerySlideShow()
 },5000);
+ 
+showPicture('lokacija-1.jpg')
 
 }
 
