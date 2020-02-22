@@ -97,13 +97,33 @@ a{
 .main-page-info li:nth-child(4) {
     font-size: large;
 }
+.button {
+    box-shadow: 7px 10px 14px 0px rgba(65, 0, 0, 0.8);
+    background: linear-gradient(to bottom, rgb(131, 0, 0) 5%, rgb(235, 97, 85, 0.5) 90%);
+    background-color: rgb(131, 0, 0);
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px rgb(129, 14, 5);
+}
+.button:hover {
+    background: linear-gradient(to top, rgb(131, 0, 0) 5%, rgb(235, 97, 85, 0.5) 90%);
+    background-color: rgb(131, 0, 0);
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
 .menu-holder{ 
     align-items: center;
 }
 .menu{
     display: none;
     background-color: rgb(131,0,0, 0.2);    
-    box-shadow: inset 0 0 30px rgba(131, 0, 0, 0.3);
+    box-shadow: inset 0 0 30px rgba(131, 0, 0, 0.5);
+    /* box-shadow: 7px 10px 14px 0px rgba(65, 0, 0, 0.8); */
     border-radius: 15px;
     text-align: center;
     margin-top: 33%;
@@ -134,7 +154,6 @@ a{
 .left-menu {
     padding: 0 3%;
     text-align: center;
-    border-right: 3px solid rgb(131, 0, 0, 0.7);
 }
 
 .menu-logo img {
@@ -274,12 +293,14 @@ a{
         border-radius: 10px;
     }
 
-    
- 
-    
     .hamburger {
         display: none;
     }
+
+    .facebook a {
+        box-shadow: 7px 10px 14px 0px rgba(65, 0, 0, 0.8);
+    }
+    
     .header-logo{
         position: inherit;
         width: 50%;
@@ -326,6 +347,7 @@ a{
 
     .left-menu {
         width: 20%;
+        border-right: 3px solid rgb(131, 0, 0, 0.7);
     }
 
     .left-menu ul li {
