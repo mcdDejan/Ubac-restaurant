@@ -70,6 +70,7 @@ a{
     position: absolute;
     top: 12vh;
     left: 2vh;
+    z-index: 1;
 }
 .facebook i{
     font-size: 250%;

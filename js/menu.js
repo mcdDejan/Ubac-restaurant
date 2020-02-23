@@ -82,7 +82,7 @@ addClassActiveBtn=(element,cssClass,elemList)=>{
         
     }
     $(element).addClass(cssClass)
-    $(element).css({'color':'white'});
+    $(element).css({'color':'rgba(255, 255, 255, 0.9)'});
 };
 
 
