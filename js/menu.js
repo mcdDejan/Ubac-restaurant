@@ -29,7 +29,7 @@ return menuContent
 
 createLeftMenuContent = () => {
     let menuLogo = $("<div>").attr("class", "menu-logo");
-    let menuLogoImg = $("<img>").attr("src","./images/logo-ubac.jpg");
+    let menuLogoImg = $("<img>").attr("src","./images/ubac-logo.png");
     
     let foodMenu = $("<ul>").attr("id", "food-menu")
     let dayDish = $("<li>").attr("id", "dayDish").text('Наш предлог');

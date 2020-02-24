@@ -18,12 +18,16 @@ $( document ).ready(function() {
     });
 
 
+    $(".start-cover-img img").click(() => {
+        animateBeerMug();
+    })
+
+
     $(".menu li").click((event) => {
         if (screen.width < 767) {
             $(".menu").css({"display": "none"});
         };
     });
-
 
     
     $(".menu li").click((event) => {
