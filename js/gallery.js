@@ -54,7 +54,9 @@ gallerySlideShow=()=>{
     catCounter>=pictureCategories.length?catCounter=0:null;
     catCounter<0?catCounter=pictureCategories.length-1:null;
 
-    showPicture(allPictures[pictureCategories[catCounter]][counter])
+    showPicture(allPictures[pictureCategories[catCounter]][counter]);
+    addClassActiveBtn('.category-btn-'+catCounter,'active-category',$('li[class^="category-btn-"]'))
+
 };
 
 createGalleryContainer = () => {
@@ -72,7 +74,9 @@ createGalleryContainer = () => {
     cssClass = parseInt(cssClass[cssClass.length-1]);
     catCounter=cssClass;
     counter=0;
-    showPicture(allPictures[pictureCategories[catCounter]][counter])
+    showPicture(allPictures[pictureCategories[catCounter]][counter]);
+    addClassActiveBtn(event.target,'active-category',$('li[class^="category-btn-"]'))
+
  });
 
 $('.gallery-btn').click(event=>{
@@ -85,8 +89,9 @@ $('.gallery-btn').click(event=>{
 setInterval(()=>{
     counter+=1
     gallerySlideShow()
-},5000);
- 
+    
+},10000);
+
 showPicture('lokacija-1.jpg')
 
 }

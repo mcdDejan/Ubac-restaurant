@@ -24,7 +24,7 @@
     margin: 0 3px;
 }
 
-.gallery-category-wrapper li:hover {
+.gallery-category-wrapper li:hover , .active-category {
     color: rgba(255, 255, 255, 0.9);
 }
 
