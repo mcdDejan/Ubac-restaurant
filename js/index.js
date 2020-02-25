@@ -11,7 +11,6 @@ $( document ).ready(function() {
         } else {
             $(".menu").css({"display": "none"});
             var classState = $(event.target).css("color")
-            console.log(classState);
         };
 
         $(".main-container").html(" ");
@@ -44,6 +43,7 @@ $( document ).ready(function() {
         switch(elementId) {
             case 'home':           
                 $(".main-page-info").css({"display": "block"});
+                createHomeContainer()
               break;
             case 'menu':
                 createMenuContainer();

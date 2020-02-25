@@ -74,17 +74,6 @@ createMenuContainer = (content) => {
 
 };
 
-// addClassActiveBtn=(element,cssClass,elemList)=>{
-
-//     for (let index = 0; index < elemList.length; index++) {
-//         $(elemList[index]).attr('class')==cssClass?$(elemList[index]).removeClass(cssClass):null;
-//         $(elemList[index]).css({'color':'rgb(131,0,0)'})
-        
-//     }
-//     $(element).addClass(cssClass)
-//     $(element).css({'color':'rgba(255, 255, 255, 0.9)'});
-// };
-
 
 addClassActiveBtn=(element,cssClass,elemList)=>{
     let testcssClass = new RegExp(cssClass);

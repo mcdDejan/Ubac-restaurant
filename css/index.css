@@ -136,6 +136,7 @@ a{
     font-size: xx-large;
     color:rgb(131, 0, 0);
     padding: 15px;
+    cursor: pointer;
 }
 
 .menu li:active {
