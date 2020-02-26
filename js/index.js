@@ -5,37 +5,22 @@ $( document ).ready(function() {
     $(".hamburger").click((event) => {
         
         animateBeerMug();
-        
-        if ($(".menu").css("display") == "none") {
-            $(".menu").css({"display": "flex"});
-        } else {
-            $(".menu").css({"display": "none"});
-            var classState = $(event.target).css("color")
-        };
+        moveInOut();
 
         $(".main-container").html(" ");
-    });
-
-
-    $(".start-cover-img img").click(() => {
-        animateBeerMug();
-    })
-
-
-    $(".menu li").click((event) => {
-        if (screen.width < 767) {
-            $(".menu").css({"display": "none"});
-        };
     });
 
     
     $(".menu li").click((event) => {
         animateBeerMug();
         addClassActiveBtn(event.target,'menu-active',$('.menu li'));
-        if(screen.width<768){
-
+        if (screen.width < 768) {
+            moveOutMenu();
+            setTimeout(()=>{
+                $(".menu").css({"display": "none"});
+            },1900);
             $(".main-page-info").css({"display": "none"});
-        }
+        };
         
         var elementId = $(event.target).attr("id")
         $(".main-container").html(" ");
@@ -43,21 +28,29 @@ $( document ).ready(function() {
         switch(elementId) {
             case 'home':           
                 $(".main-page-info").css({"display": "block"});
-                createHomeContainer()
-              break;
+                setTimeout(()=> {
+                    createHomeContainer();
+                    mapGrow()
+                }, 500)
+                break;
+
             case 'menu':
                 createMenuContainer();
-              break;
-              case 'about':
-                createAboutContainer();
-                $(".main-page-info").css({"display": "block"});
-                
+                moveIn();
                 break;
-                case 'gallery':
-                    createGalleryContainer();
-                    $(".main-page-info").css({"display": "none"});
 
-                    break;
+            case 'about':
+                createAboutContainer();
+                moveIn();
+                $(".main-page-info").css({"display": "block"});
+                break;
+
+            case 'gallery':
+                createGalleryContainer();
+                moveIn();
+                $(".main-page-info").css({"display": "none"});
+                break;
+
             default:
               // code block
           };
@@ -78,24 +71,6 @@ $( document ).ready(function() {
         });
 
     });
-    
-
-    
- 
-
-    // $("#food-menu li").click(function() {
-
-    //     var a = $(this).text()
-    //     $(".current-food").html(a);
-
-    // });
-
-
-
-
-
-
-
 
 
 

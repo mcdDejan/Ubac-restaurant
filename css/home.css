@@ -1,3 +1,31 @@
+
+@keyframes grow {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 100%;
+    }
+
+}
+
+@keyframes grow-responsive {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 60%;
+    }
+
+}
+
+.grow {
+    animation: grow 1s;
+}
+.grow-responsive {
+    animation: grow-responsive 1s;
+}
+
 .home-container{
     position: absolute;
     top: 17%;
@@ -9,7 +37,7 @@
     justify-content: center;
     padding: 10px;
 }
-.home-container h1{
+.home-container h1, p{
     width: 100%;
     text-align: center;
     color: rgb(131, 0, 0);
@@ -20,6 +48,7 @@
     overflow: hidden;
     border:5px solid rgb(131, 0, 0);
     border-radius: 20px;
+    box-shadow: 7px 10px 14px 0px rgba(65, 0, 0, 0.8);
 }
 .map-holder iframe{
     width: 100%;

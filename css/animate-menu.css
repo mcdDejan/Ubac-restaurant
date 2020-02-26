@@ -1,0 +1,30 @@
+
+@keyframes move-in {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes move-out {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.move-in {
+    animation: move-in 2s;
+}
+
+.move-out {
+    animation: move-out 2s;
+}
