@@ -10,6 +10,7 @@
 
 .gallery-category-wrapper { 
     align-items: center;
+    justify-content: center;
     padding: 0 20px;
     background-color: rgba(131,0,0, 0.2);
     box-shadow: inset 0 0 30px rgba(131, 0, 0, 0.5);
@@ -22,7 +23,7 @@
 
 .gallery-category-wrapper li {
     font-size: x-large;
-    padding: 0 10px;
+    padding: 0 5px;
     margin: 0 3px;
     cursor: pointer;
 }
@@ -84,6 +85,10 @@
     .gallery-category-wrapper { 
         flex-flow: wrap;
         margin-bottom: 0;
+    }
+
+    .gallery-category-wrapper li {
+        padding: 0 10px;
     }
 
     .gallery-slide-wrapper {
