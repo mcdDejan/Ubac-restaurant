@@ -32,7 +32,6 @@ mapGrow=()=> {
     $('.home-container').addClass('grow-responsive');
     } else {
         $('.home-container').addClass('grow');
-        console.log('grow')
     };
 };
 

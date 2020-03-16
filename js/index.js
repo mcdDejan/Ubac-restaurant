@@ -2,8 +2,11 @@ $( document ).ready(function() {
    
     let menuContent = getMenuContent();
 
+    $(".start-cover-img").css({"display": "none"}); // temporary corona
+
     $(".hamburger").click((event) => {
         
+        $(".corona").css({"display": "none"}); // temporary corona
         animateBeerMug();
         moveInOut();
 
@@ -12,6 +15,8 @@ $( document ).ready(function() {
 
     
     $(".menu li").click((event) => {
+        $(".corona").css({"display": "none"}); // temporary corona
+        $(".start-cover-img").css({"display": "flex"}) // temporary corona
         animateBeerMug();
         addClassActiveBtn(event.target,'menu-active',$('.menu li'));
         if (screen.width < 768) {
@@ -31,7 +36,7 @@ $( document ).ready(function() {
                 setTimeout(()=> {
                     createHomeContainer();
                     mapGrow()
-                }, 500)
+                }, 1500)
                 break;
 
             case 'menu':
@@ -46,8 +51,10 @@ $( document ).ready(function() {
                 break;
 
             case 'gallery':
+                setTimeout(()=> {
                 createGalleryContainer();
                 moveIn();
+                }, 1500)
                 $(".main-page-info").css({"display": "none"});
                 break;
 
