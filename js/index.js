@@ -42,6 +42,10 @@ $( document ).ready(function() {
             case 'menu':
                 createMenuContainer();
                 moveIn();
+                $(".right-menu").html(" ");
+            let content = createRightMenuContent(menuContent.dayDish);
+            addClassActiveBtn($('#dayDish'),'left-menu-active',$('#food-menu li'))
+            $(".right-menu").append(content);
                 break;
 
             case 'about':
