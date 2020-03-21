@@ -22,9 +22,9 @@
 }
 
 .move-in {
-    animation: move-in 2s;
+    animation: move-in 1s;
 }
 
 .move-out {
-    animation: move-out 2s;
+    animation: move-out 1s;
 }

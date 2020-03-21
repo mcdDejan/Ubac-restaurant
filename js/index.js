@@ -23,7 +23,7 @@ $( document ).ready(function() {
             moveOutMenu();
             setTimeout(()=>{
                 $(".menu").css({"display": "none"});
-            },1900);
+            },900);
             $(".main-page-info").css({"display": "none"});
         };
         
@@ -35,7 +35,7 @@ $( document ).ready(function() {
                 $(".main-page-info").css({"display": "block"});
                 setTimeout(()=> {
                     createHomeContainer();
-                    mapGrow()
+                    mapGrow();
                 }, 1500)
                 break;
 
@@ -43,9 +43,11 @@ $( document ).ready(function() {
                 createMenuContainer();
                 moveIn();
                 $(".right-menu").html(" ");
-            let content = createRightMenuContent(menuContent.dayDish);
-            addClassActiveBtn($('#dayDish'),'left-menu-active',$('#food-menu li'))
-            $(".right-menu").append(content);
+                let content = createRightMenuContent(menuContent.dayDish);
+                if (screen.width > 767) {
+                    addClassActiveBtn($('#dayDish'),'left-menu-active',$('#food-menu li'))
+                    $(".right-menu").append(content);
+                };
                 break;
 
             case 'about':
@@ -70,11 +72,11 @@ $( document ).ready(function() {
         $("#food-menu li").click((event) => {
             addClassActiveBtn(event.target,'left-menu-active',$('#food-menu li'))
 
-            if (screen.width < 767) {
-                $("#food-menu").css({"display": "flex", "overflow-x": "auto", "align-items": "strech"});
-                $(".left-menu ul li").css({"display": "flex", "align-items": "center", "background-color": "rgba(131, 0, 0, 0.4)","border-radius": "10px", "padding": "5px", "margin": "5px"});
-                $(".right-menu-header").css({"margin": "7px"});
-            }
+            if (screen.width < 768) {
+                $("#food-menu").addClass('food-menu-x');
+                $(".left-menu ul li").addClass('left-menu-x');
+            };
+            
             $(".right-menu").html(" ");
             let elementId = $(event.target).attr("id");
             let content = createRightMenuContent(menuContent[elementId]);

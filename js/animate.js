@@ -52,7 +52,7 @@ moveInOut=()=>{
         $('.menu').addClass('move-out');
             setTimeout(()=>{
                 $(".menu").css({"display": "none"});
-            },1900);
+            },900);
         };
 
 };
