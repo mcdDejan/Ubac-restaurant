@@ -2,11 +2,8 @@ $( document ).ready(function() {
    
     let menuContent = getMenuContent();
 
-    $(".start-cover-img").css({"display": "none"}); // temporary corona
-
     $(".hamburger").click((event) => {
         
-        $(".corona").css({"display": "none"}); // temporary corona
         animateBeerMug();
         moveInOut();
 
@@ -15,8 +12,6 @@ $( document ).ready(function() {
 
     
     $(".menu li").click((event) => {
-        $(".corona").css({"display": "none"}); // temporary corona
-        $(".start-cover-img").css({"display": "flex"}) // temporary corona
         animateBeerMug();
         addClassActiveBtn(event.target,'menu-active',$('.menu li'));
         if (screen.width < 768) {
